@@ -1,0 +1,20 @@
+version: "3"
+services:
+  mysqldb:
+    image: mysql:latest
+    container_name: studentsdb
+    environment:
+      - MYSQL_ROOT_PASSWORD=student
+      - MYSQL_DATABASE=studentcsvdb
+      - MYSQL_USER=student
+      - MYSQL_PASSWORD=student
+
+  studentsrestapp:
+    image: getaneh/studentsrestapp:latest
+    container_name: studentsrestapp
+    depends_on:
+      - mysqldb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://studentsdb:3306/studentcsvdb?createDatabaseIfNotExist=true
+    ports:
+      - 8080:9999

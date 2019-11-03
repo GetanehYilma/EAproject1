@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" th:src="@{js/students.js}" src="js/students.js"></script>
+
+</head>
+<body>
+
+<form action="/save" id="saveStudents" method="post" class="container">
+    <fieldset>
+        <legend>Click start to save list of students to database</legend>
+<!--        <input type="hidden" value="started">-->
+        <input type="button" value="START" class="btn btn-primary" onclick="saveUserData();">
+    </fieldset>
+
+</form>
+
+    <div class="container" id="success">
+
+    </div>
+
+</body>
+</html>
