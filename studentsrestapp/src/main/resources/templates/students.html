@@ -19,8 +19,16 @@
 
 </form>
 
+    <h3 class="container">OR</h3>
+
     <div class="container" id="success">
 
+    </div>
+
+    <div>
+        <form th:action="@{/logout}" method="POST" class="container">
+            <input type="submit" value="Logout" class="btn-danger"/>
+        </form>
     </div>
 
 </body>

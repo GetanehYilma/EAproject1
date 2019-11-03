@@ -1,7 +1,8 @@
 
 function saveUserData(){
 
-
+    $('#success').html("");
+    $('#success').append( '<h1>Congratulations! <h1>');
     $.ajax({
         url: '/save',
         type: 'GET',

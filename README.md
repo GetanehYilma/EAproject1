@@ -1,6 +1,11 @@
 Hello!
 Follow this steps to run the application:
 
+Step 0
+
+A link to source code:
+https://github.com/GetanehYilma/EAproject1
+
   
 Step 1:
 
